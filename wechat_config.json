@@ -1,0 +1,77 @@
+{
+  "window_title": "微信",
+  "window_position": [
+    -10,
+    0
+  ],
+  "window_size": [
+    800,
+    600
+  ],
+  "contacts_region": [
+    111,
+    83,
+    184,
+    501
+  ],
+  "username_region": [
+    302,
+    35,
+    401,
+    46
+  ],
+  "chat_region": [
+    301,
+    82,
+    469,
+    367
+  ],
+  "message_input_position": [
+    388,
+    474
+  ],
+  "black_text_threshold": 210,
+  "gray_text_threshold": 210,
+  "check_interval": 5,
+  "max_contacts_to_check": 10,
+  "debug_mode": false,
+  "cache_timeout": 300,
+  "line_send_interval": 0.6,
+  "data_dir": "data",
+  "ai": {
+    "provider": "openai_compat",
+    "base_url": "http://127.0.0.1:1234/v1",
+    "api_key": "o",
+    "model": "d",
+    "timeout": 60,
+    "system_prompt": "你的名字叫做小白，正在与微信用户聊天。请生成友好、自然、有帮助的中文回复。回复要简洁明了。",
+    "temperature": 0.7,
+    "max_tokens": 1000000
+  },
+  "guardian": {
+    "max_consecutive_errors": 5,
+    "cooldown_on_burst": 30,
+    "wechat_recheck_interval": 60,
+    "max_idle_rounds": 0
+  },
+  "ipc": {
+    "runtime_dir": "runtime",
+    "status_file": "daemon_status.json",
+    "control_file": "control.json",
+    "whitelist_file": "whitelist.txt",
+    "blacklist_file": "blacklist.txt",
+    "pause_flag": "pause.flag",
+    "status_ttl": 30
+  },
+  "whitelist": {
+    "enabled": false,
+    "case_sensitive": false
+  },
+  "kb": {
+    "enabled": true,
+    "file": "knowledge.txt",
+    "top_k": 3,
+    "min_score": 0.05,
+    "max_chars_per_chunk": 400
+  }
+}

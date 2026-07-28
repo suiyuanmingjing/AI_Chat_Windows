@@ -1,0 +1,19 @@
+# Web/WeChat automation & OCR
+pygetwindow>=0.0.9
+pyautogui>=0.9.54
+pyperclip>=1.8.2
+Pillow>=10.0.0
+numpy>=1.24,<3.0
+
+# OCR (CPU)
+cnocr>=2.3.0
+cnstd>=1.2.0
+opencv-python-headless>=4.8.0
+
+# AI client (OpenAI compatible — works with Ollama, vLLM, OpenAI, etc.)
+openai>=1.30.0
+requests>=2.31.0
+httpx>=0.27.0
+
+# Optional: keep original ollama SDK as a fallback path
+ollama>=0.3.0
