@@ -48,4 +48,4 @@ __all__ = [
     "KnowledgeBase",
 ]
 
-__version__ = "2.6.3"
+__version__ = "1.0.1"
