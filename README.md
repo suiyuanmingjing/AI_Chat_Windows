@@ -4,7 +4,7 @@
 
 
 ## 1. 声明
-本项目通过模拟鼠标点击实现控制，通过截图进行文本识别，复制粘贴AI回复到微信窗口进行回复。
+本项目通过模拟鼠标点击实现控制，通过截图进行文本识别，复制粘贴AI回复到微信窗口进行回复，在一定程度上规避了微信使用条款。
 
 仅供个人学习与自动化测试使用，请遵守微信使用条款与当地法律法规。
 
@@ -47,8 +47,8 @@ python gui.py
 
 - `pygetwindow`、`pyautogui`、`pyperclip`、`Pillow`、`numpy`
 - `cnocr==2.3.3`、`cnstd==1.2.8`、`opencv-python-headless`
-- `openai>=2.0`（默认走 OpenAI 兼容协议；Ollama / vLLM / OneAPI 通用）
-- `ollama`（可选：旧 SDK 路径）
+- `openai>=2.0`（默认走 OpenAI 兼容协议）
+- `ollama`（可选）
 - 标准库 `tkinter`
 
 ## 3. 配置 `wechat_config.json`
@@ -72,10 +72,10 @@ python gui.py
   "ai": {
     "provider": "openai_compat",     // openai_compat | ollama_sdk
     "base_url": "http://127.0.0.1:11434/v1",
-    "api_key": "ollama",              // Ollama 兼容模式下填什么都行
-    "model": "deepseek-r1:7b",
+    "api_key": "。",             
+    "model": "。",
     "timeout": 60,
-    "system_prompt": "你的名字叫做小镜...每句话的末尾加一个\"喵~\".",
+    "system_prompt": ".",
     "temperature": 0.7,
     "max_tokens": 512
   },
@@ -96,8 +96,6 @@ python gui.py
 > **入口拆分**：
 > - GUI 控制器：`python gui.py` （或 `python -m gui`）
 > - CLI / 守护：`python daemon.py --daemon` / `--once` / `--test` 等
-> 
-> 不再通过 `main.py` 启动任何东西（已重命名为 `daemon.py`）。
 
 ```bash
 # 查看所有选项
